@@ -37,7 +37,7 @@ public class CategoriaController {
         if(categoriaRepository.findById(id).isPresent())
             existingCategoria = categoriaRepository.findById(id).get();
         existingCategoria.setDescricao(categoria.getDescricao());
-
+        //existingCategoria = categoria;
         categoriaRepository.save(existingCategoria);
     }
 }
